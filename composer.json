@@ -2,7 +2,7 @@
     "require": {
         "coffeecode/router": "^1.0",
         "coffeecode/datalayer": "^1.1",
-        "league/plates": "^3.3"
+        "league/plates": "4.0.0-alpha"
     },
     "autoload": {
         "psr-4": {
