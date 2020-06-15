@@ -8,8 +8,10 @@ use Source\Model\Payment;
 class Web
 {
     private $view;
-    public function __construct()
+    private $router;
+    public function __construct($router)
     {
+        $this->router = $router;
         $this->view = Engine::create(__DIR__.'/../View','php');
     }
 
@@ -45,14 +47,22 @@ class Web
     public function listItems($data)
     {
         $payments = new Payment();
-
+        $url = URL_BASE;
         $pymnt = $payments->find()->fetch(true);
-//        foreach ($pymnt as $p){
-//            var_dump($p->title);
-//        }
         echo $this->view->render('listItems', [
-            'payments' => $pymnt
+            'payments' => $pymnt,
+            'url' => $url
         ]);
+    }
+    public function deleteItem($data)
+    {
+        if($data)
+        {
+            $payments = (new Payment())->findById($data['id']);
+            $payments->destroy();
+        }
+        $this->router->redirect('listar');
+
     }
 
     public function changeItem($data)

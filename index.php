@@ -11,6 +11,6 @@ $route->group(null);
 $route->get("/inserir","Web:insert");
 $route->post("/inserir","Web:insert");
 $route->get('/listar',"Web:listItems");
-$route->post('/listar',"Web:listItems");
+$route->get('/excluir/{id}',"Web:deleteItem");
 
 $route->dispatch();
