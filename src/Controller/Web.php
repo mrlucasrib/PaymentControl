@@ -123,13 +123,14 @@ class Web
      * GET - /importxlsx
      * Retorna a pagina para fazer upload de planilha
      * POST - /importxlsx
-     * Salva a planilha na pasta uploads e registra items no banco de dados.
+     * Salva a planilha na pasta uploads e registra itens no banco de dados.
      * @param array $data
      */
     public function importXlsx(array $data): void
     {
         // Permite apenas o upload de planilhas
-        $file = new Send(__DIR__."/../../uploads",'excel',["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],['xlsx'],false);
+        $file = new Send(__DIR__ . "/../../uploads", 'excel',
+            ["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"], ['xlsx'], false);
         $message = null;
         if ($_FILES) {
             try {
@@ -140,7 +141,7 @@ class Web
                 $reader->changeSheet(0);
                 foreach ($reader as $row) {
                     // Verifica se não há linha vazia
-                    if(!empty($row[0])){
+                    if (!empty($row[0])) {
                         $payment = new Payment();
 
                         // Verifica se na planilha existe o comentario, e se não existir atribui a null
@@ -156,7 +157,7 @@ class Web
             }
 
         }
-            $url = URL_BASE;
+        $url = URL_BASE;
         echo $this->view->render('importXlsx', [
             'url' => $url,
             'message' => $message
@@ -173,17 +174,16 @@ class Web
     private function changeOrInsert(Payment $payment, array $data): bool
     {
         /* Verifica se o tamanho do titulo esta conforme pede a atividade */
-        if(strlen($data['title']) >= 5 && strlen($data['title']) <= 100)
+        if (strlen($data['title']) >= 5 && strlen($data['title']) <= 100)
             $payment->title = $data['title'];
         else
             return false;
         $payment->value = (float)$data['value'];
         /* Verifica se o campo esta como Y-m-d */
-        if(checkdate(
-            (int)substr($data['date'],5,2),
-            (int)substr($data['date'],8,2),
-            (int)substr($data['date'],0,4)))
-        {
+        if (checkdate(
+            (int)substr($data['date'], 5, 2),
+            (int)substr($data['date'], 8, 2),
+            (int)substr($data['date'], 0, 4))) {
             $payment->date = $data['date'];
         } else
             return false;

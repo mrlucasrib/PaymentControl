@@ -2,7 +2,7 @@
 <form name="env" action="<?= $url; ?>/importxlsx" method="POST" enctype="multipart/form-data">
     <label>
         Insira a planilha
-        <input name="file"  type="file" />
+        <input name="file" type="file"/>
     </label>
     <button type="submit">Enviar</button>
 </form>

@@ -1,0 +1,17 @@
+php:
+  build: .
+  ports:
+    - "84:80"
+  volumes:
+    - .:/var/www/html
+  links:
+    - db
+
+db:
+  image: mysql:8.0
+  volumes:
+    - /var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_PASSWORD=
+    - MYSQL_DATABASE=voxus
