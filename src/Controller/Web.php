@@ -94,7 +94,6 @@ class Web
         if ($_FILES) {
             try {
                 $file->upload($_FILES['file'], $_FILES['file']['name']);
-//                echo "<p><a href='{$upload}' target='_blank'>@CoffeeCode</a></p>";
             } catch (Exception $e) {
                 echo "<p>(!) {$e->getMessage()}</p>";
             }
