@@ -3,7 +3,8 @@
         "coffeecode/router": "^1.0",
         "coffeecode/datalayer": "^1.1",
         "league/plates": "4.0.0-alpha",
-        "coffeecode/uploader": "^1.0"
+        "coffeecode/uploader": "^1.0",
+        "aspera/xlsx-reader": "^0.8.0"
     },
     "autoload": {
         "psr-4": {

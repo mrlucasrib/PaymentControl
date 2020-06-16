@@ -2,6 +2,7 @@
 
 namespace Source\Controller;
 
+use Aspera\Spreadsheet\XLSX\Reader;
 use CoffeeCode\Uploader\File;
 use CoffeeCode\Uploader\Send;
 use League\Plates\Engine;
@@ -93,10 +94,18 @@ class Web
         var_dump($_FILES);
         if ($_FILES) {
             try {
-                $file->upload($_FILES['file'], $_FILES['file']['name']);
+                $path = $file->upload($_FILES['file'], $_FILES['file']['name']);
+                $reader = new Reader();
+                $reader->open($path);
+                $reader->changeSheet(0);
+                foreach ($reader as $row) {
+                    print_r($row);
+//                    // TODO: LER E GRAVAR NO BD
+                }
             } catch (Exception $e) {
                 echo "<p>(!) {$e->getMessage()}</p>";
             }
+
         }
             $url = URL_BASE;
         echo $this->view->render('importXlsx', [
