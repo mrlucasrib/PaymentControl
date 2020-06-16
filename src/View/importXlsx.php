@@ -6,3 +6,8 @@
     </label>
     <button type="submit">Enviar</button>
 </form>
+<?php if ($message):
+    echo $message;
+endif;
+
+?>

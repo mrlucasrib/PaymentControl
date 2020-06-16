@@ -8,7 +8,7 @@
     <button type="submit">Enviar</button>
 </form>
 
-<?php if (!empty($message)):
+<?php if ($message):
     echo $message;
 endif;
 ?>
