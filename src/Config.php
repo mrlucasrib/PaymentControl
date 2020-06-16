@@ -1,5 +1,5 @@
 <?php
-define('URL_BASE', 'http://localhost');
+define('URL_BASE', 'http://localhost/sistema-pagamento');
 define("DATA_LAYER_CONFIG", [
     "driver" => "mysql",
     "host" => "localhost",
