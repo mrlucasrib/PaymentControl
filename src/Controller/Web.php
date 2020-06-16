@@ -2,6 +2,8 @@
 
 namespace Source\Controller;
 
+use CoffeeCode\Uploader\File;
+use CoffeeCode\Uploader\Send;
 use League\Plates\Engine;
 use Source\Model\Payment;
 
@@ -21,7 +23,7 @@ class Web
         $message = null;
 
         /* Verifica se o formulario foi submetido  e registra no banco */
-        if (!empty($data)) {
+        if ($data) {
             $payment = new Payment();
 
             if ($this->changeOrInsert($payment, $data))
@@ -63,36 +65,47 @@ class Web
     {
         if (array_key_exists('index', $data)) {
             $message = null;
-            $payments = null;
+            $payment = (new Payment())->findById($data['index']);
+
             // Se o item foi alterado essa key existirá
             if (array_key_exists('title', $data)) {
-                $payment = (new Payment())->findById($data['index']);
                 if ($this->changeOrInsert($payment, $data)) {
                     $this->router->redirect('listar');
                 } else {
                     $message = "Falha ao editar registro";
                 }
 
-            } else {
-                $payments = (new Payment())->findById($data['index']);
             }
-            $url = URL_BASE;
 
+            $url = URL_BASE;
             echo $this->view->render('editItem', [
                 'url' => $url,
                 'message' => $message,
-                'payments' => $payments
+                'payments' => $payment
 
             ]);
         }
     }
 
-    /* Valida os campos e retorna true se esta dentro do esperadp */
-    private function validData(string $title, int $value, string $date): bool
+    public function importXlsx($data)
     {
-
-        return true;
+        $file = new Send(__DIR__."/../../uploads",'excel',["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],['xlsx'],false);
+        var_dump($_FILES);
+        if ($_FILES) {
+            try {
+                $file->upload($_FILES['file'], $_FILES['file']['name']);
+//                echo "<p><a href='{$upload}' target='_blank'>@CoffeeCode</a></p>";
+            } catch (Exception $e) {
+                echo "<p>(!) {$e->getMessage()}</p>";
+            }
+        }
+            $url = URL_BASE;
+        echo $this->view->render('importXlsx', [
+            'url' => $url
+        ]);
     }
+
+
 
     private function changeOrInsert($payment, $data): bool
     {

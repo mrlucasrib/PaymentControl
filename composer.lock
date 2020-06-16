@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a346950ad78a5bcd013ccb8185df62d2",
+    "content-hash": "23b771146805ce5415895b88ea1e56b6",
     "packages": [
         {
             "name": "coffeecode/datalayer",
@@ -99,6 +99,60 @@
                 "upinside"
             ],
             "time": "2019-09-30T16:29:47+00:00"
+        },
+        {
+            "name": "coffeecode/uploader",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robsonvleite/uploader.git",
+                "reference": "46d681fb3fe64a92d53dd99ea38382edae0db9dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robsonvleite/uploader/zipball/46d681fb3fe64a92d53dd99ea38382edae0db9dc",
+                "reference": "46d681fb3fe64a92d53dd99ea38382edae0db9dc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CoffeeCode\\Uploader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robson V. Leite",
+                    "email": "cursos@upinside.com.br",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Tiago Chini",
+                    "email": "tiago.chini@hotmail.com",
+                    "role": "collaborator"
+                }
+            ],
+            "description": "It is a easy PHP upload manager for images, files and media in your application",
+            "homepage": "http://www.upinside.com.br",
+            "keywords": [
+                "Coffeecode",
+                "Image upload",
+                "file upload",
+                "media upload",
+                "upinside",
+                "upload"
+            ],
+            "time": "2020-06-13T00:15:08+00:00"
         },
         {
             "name": "league/plates",

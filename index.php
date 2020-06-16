@@ -14,5 +14,7 @@ $route->get('/listar', "Web:listItems");
 $route->get('/excluir/{id}', "Web:deleteItem");
 $route->get('/editar/{index}', "Web:editItem");
 $route->post('/editar/{index}', "Web:editItem");
+$route->get('/importxlsx', "Web:importXlsx");
+$route->post('/importxlsx', "Web:importXlsx");
 
 $route->dispatch();

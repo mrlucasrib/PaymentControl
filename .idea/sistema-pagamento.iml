@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/coffeecode/datalayer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/coffeecode/router" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/coffeecode/uploader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/plates" />
     </content>

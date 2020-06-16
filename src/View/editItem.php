@@ -7,7 +7,7 @@
         </label>
         <label>
             Valor
-            <input name="value" type="number" value="<?= $payments->value; ?>"/>
+            <input name="value" type="text" value="<?= $payments->value; ?>"/>
         </label>
         <label>
             Data
