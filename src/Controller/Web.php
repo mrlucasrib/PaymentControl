@@ -87,11 +87,6 @@ class Web
         }
     }
 
-    public function params(array $data): void
-    {
-        var_dump($data);
-    }
-
     /* Valida os campos e retorna true se esta dentro do esperadp */
     private function validData(string $title, int $value, string $date): bool
     {
@@ -101,12 +96,23 @@ class Web
 
     private function changeOrInsert($payment, $data): bool
     {
-//         TODO: FAZER VERIFICAÇÃO DO REGISTRO validData
-
-        $payment->title = $data['title'];
+//        CORRIGIR: ELE NAO ACEITA MSG
+            /* Verifica se o tamanho do titulo esta conforme pede a atividade */
+        if(strlen($data['title']) >= 5 && strlen($data['title']) <= 100)
+            $payment->title = $data['title'];
+        else
+            return false;
         $payment->value = (float)$data['value'];
-        $payment->date = $data['date'];
-        $payment->external_tax = $data['value'];  //TODO: ALTERAR
+        /* Verifica se o campo esta como Y-m-d */
+        if(checkdate(
+            (int)substr($data['date'],5,2),
+            (int)substr($data['date'],8,2),
+            (int)substr($data['date'],0,4)))
+        {
+            $payment->date = $data['date'];
+        } else
+            return false;
+        $payment->external_tax = (float)$data['value'] * 0.05;
         $payment->comments = $data['comments'];
         return $payment->save();
 
