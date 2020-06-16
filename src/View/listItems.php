@@ -11,41 +11,41 @@ Inserir e excluir.
         <th>EDITAR</th>
         <th>EXCLUIR</th>
     </tr>
-<?php if($payments):
-    foreach ($payments as $pay): ?>
+    <?php if ($payments):
+        foreach ($payments as $pay): ?>
 
-        <tr>
-            <td>
-                <?= $pay->id; ?>
-            </td>
-            <td>
-                <?= $pay->title; ?>
-            </td>
-            <td>
-                <?= $pay->value; ?>
-            </td>
-            <td>
-                <?= $pay->date; ?>
-            </td>
-            <td>
-                <?= $pay->external_tax; ?>
-            </td>
-            <td>
-                <?= $pay->comment; ?>
-            </td>
-            <td>
-                <?= $pay->comments; ?>
-            </td>
-            <td>
-                EDITAR
-            </td>
-            <td>
-                <a href="<?= $url; ?>/excluir/<?= $pay->id; ?>">EXCLUIR</a>
-            </td>
-        </tr>
-<?php
-    endforeach;
-endif;
-?>
+            <tr>
+                <td>
+                    <?= $pay->id; ?>
+                </td>
+                <td>
+                    <?= $pay->title; ?>
+                </td>
+                <td>
+                    <?= $pay->value; ?>
+                </td>
+                <td>
+                    <?= $pay->date; ?>
+                </td>
+                <td>
+                    <?= $pay->external_tax; ?>
+                </td>
+                <td>
+                    <?= $pay->comment; ?>
+                </td>
+                <td>
+                    <?= $pay->comments; ?>
+                </td>
+                <td>
+                    EDITAR
+                </td>
+                <td>
+                    <a href="<?= $url; ?>/excluir/<?= $pay->id; ?>">EXCLUIR</a>
+                </td>
+            </tr>
+        <?php
+        endforeach;
+    endif;
+    ?>
 </table>
 
