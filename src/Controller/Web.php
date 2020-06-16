@@ -104,7 +104,7 @@ class Web
 //         TODO: FAZER VERIFICAÇÃO DO REGISTRO validData
 
         $payment->title = $data['title'];
-        $payment->value = $data['value'];
+        $payment->value = (float)$data['value'];
         $payment->date = $data['date'];
         $payment->external_tax = $data['value'];  //TODO: ALTERAR
         $payment->comments = $data['comments'];

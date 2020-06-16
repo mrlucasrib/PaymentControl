@@ -37,7 +37,8 @@ Inserir e excluir.
                     <?= $pay->comments; ?>
                 </td>
                 <td>
-                    EDITAR
+                    <a href="<?= $url; ?>/editar/<?= $pay->id; ?>">EDITAR</a>
+
                 </td>
                 <td>
                     <a href="<?= $url; ?>/excluir/<?= $pay->id; ?>">EXCLUIR</a>
