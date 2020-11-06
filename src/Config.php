@@ -7,7 +7,7 @@ define("DATA_LAYER_CONFIG", [
     "driver" => "pgsql",
     "host" => $db['host'],
     "port" => $db['port'],
-    "dbname" => "payments",
+    "dbname" => ltrim($db["path"], "/"),
     "username" => $db['user'],
     "passwd" => $db['pass'],
     "options" => [
