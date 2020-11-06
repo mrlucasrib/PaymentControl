@@ -1,5 +1,5 @@
 <?php
-define('URL_BASE', 'http://localhost:8001');
+define('URL_BASE', '');
 define("DATA_LAYER_CONFIG", [
     "driver" => "mysql",
     "host" => "db",
