@@ -58,11 +58,6 @@
                 "xls",
                 "xlsx"
             ],
-            "support": {
-                "email": "info@aspera.com",
-                "issues": "https://github.com/AsperaGmbH/xlsx-reader/issues",
-                "source": "https://github.com/AsperaGmbH/xlsx-reader/tree/v0.8.1"
-            },
             "time": "2020-10-02T12:50:34+00:00"
         },
         {
@@ -112,10 +107,6 @@
                 "save",
                 "upinside"
             ],
-            "support": {
-                "issues": "https://github.com/robsonvleite/datalayer/issues",
-                "source": "https://github.com/robsonvleite/datalayer/tree/1.1.7"
-            },
             "time": "2020-07-02T17:10:50+00:00"
         },
         {
@@ -161,10 +152,6 @@
                 "routes",
                 "upinside"
             ],
-            "support": {
-                "issues": "https://github.com/robsonvleite/router/issues",
-                "source": "https://github.com/robsonvleite/router/tree/master"
-            },
             "time": "2019-09-30T16:29:47+00:00"
         },
         {
@@ -219,10 +206,6 @@
                 "upinside",
                 "upload"
             ],
-            "support": {
-                "issues": "https://github.com/robsonvleite/uploader/issues",
-                "source": "https://github.com/robsonvleite/uploader/tree/master"
-            },
             "time": "2020-06-23T13:22:03+00:00"
         },
         {
@@ -295,10 +278,6 @@
                 "templating",
                 "views"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/plates/issues",
-                "source": "https://github.com/thephpleague/plates/tree/master"
-            },
             "time": "2018-01-31T07:20:23+00:00"
         }
     ],
@@ -312,5 +291,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }
