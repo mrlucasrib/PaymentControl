@@ -32,7 +32,7 @@ CoffeeCode é um conjunto de pequenos e otimizados componentes PHP para tarefas 
 Data Layer is available via Composer:
 
 ```bash
-"coffeecode/datalayer": "^1.0"
+"coffeecode/datalayer": "1.1.*"
 ```
 
 or run
@@ -117,6 +117,10 @@ foreach ($users as $user) {
 //find one user by condition
 $user = $model->find("first_name = :name", "name=Robson")->fetch();
 echo $user->first_name;
+
+//find one user by two conditions
+$user = $model->find("first_name = :name AND last_name = :last", "name=Robson&last=Leite")->fetch();
+echo $user->first_name . " " . $user->first_last;
 ```
 
 #### findById
@@ -128,6 +132,28 @@ use Example\Models\User;
 $model = new User();
 $user = $model->findById(2);
 echo $user->first_name;
+```
+
+#### secure params
+######See example find_example.php and model classes
+Consulte exemplo find_example.php e classes modelo
+
+```php
+$params = http_build_query(["name" => "UpInside & Associated"]);
+$company = (new Company())->find("name = :name", $params);
+var_dump($company, $company->fetch());
+```
+
+#### join method
+######See example find_example.php and model classes
+Consulte exemplo find_example.php e classes modelo
+
+```php
+$addresses = new Address();
+$address = $addresses->findById(22);
+//get user data to this->user->[all data]
+$address->user();
+var_dump($address);
 ```
 
 #### count
@@ -184,6 +210,27 @@ if($user->fail()){
     echo $user->fail()->getMessage();
 }
 ```
+
+#### custom data method
+
+````php
+class User{
+    //...
+
+    public function fullName(): string 
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
+    
+    public function document(): string
+    {
+        return "Restrict";
+    }
+}
+
+echo $this->full_name; //Robson V. Leite
+echo $this->document; //Restrict
+```` 
 
 ## Contributing
 

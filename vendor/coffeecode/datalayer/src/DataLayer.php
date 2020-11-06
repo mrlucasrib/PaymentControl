@@ -94,6 +94,15 @@ abstract class DataLayer
      */
     public function __get($name)
     {
+        $method = $this->toCamelCase($name);
+        if (method_exists($this, $method)) {
+            return $this->$method();
+        }
+
+        if (method_exists($this, $name)) {
+            return $this->$name();
+        }
+
         return ($this->data->$name ?? null);
     }
 
@@ -138,8 +147,7 @@ abstract class DataLayer
      */
     public function findById(int $id, string $columns = "*"): ?DataLayer
     {
-        $find = $this->find($this->primary . " = :id", "id={$id}", $columns);
-        return $find->fetch();
+        return $this->find("{$this->primary} = :id", "id={$id}", $columns)->fetch();
     }
 
     /**
@@ -233,7 +241,7 @@ abstract class DataLayer
             /** Update */
             if (!empty($this->data->$primary)) {
                 $id = $this->data->$primary;
-                $this->update($this->safe(), $this->primary . " = :id", "id={$id}");
+                $this->update($this->safe(), "{$this->primary} = :id", "id={$id}");
             }
 
             /** Create */
@@ -265,8 +273,7 @@ abstract class DataLayer
             return false;
         }
 
-        $destroy = $this->delete($this->primary . " = :id", "id={$id}");
-        return $destroy;
+        return $this->delete("{$this->primary} = :id", "id={$id}");
     }
 
     /**
@@ -290,7 +297,18 @@ abstract class DataLayer
     {
         $safe = (array)$this->data;
         unset($safe[$this->primary]);
-
         return $safe;
+    }
+
+
+    /**
+     * @param string $string
+     * @return string
+     */
+    protected function toCamelCase(string $string): string
+    {
+        $camelCase = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));
+        $camelCase[0] = strtolower($camelCase[0]);
+        return $camelCase;
     }
 }

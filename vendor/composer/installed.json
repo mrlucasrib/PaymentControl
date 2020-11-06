@@ -1,17 +1,17 @@
 [
     {
         "name": "aspera/xlsx-reader",
-        "version": "v0.8.0",
-        "version_normalized": "0.8.0.0",
+        "version": "v0.8.1",
+        "version_normalized": "0.8.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/AsperaGmbH/xlsx-reader.git",
-            "reference": "0794764b8d2592f3d8e5c1214a985d3ed5e4e4af"
+            "reference": "0b61140ba905736b09e294f575acf47fe7edb44f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/AsperaGmbH/xlsx-reader/zipball/0794764b8d2592f3d8e5c1214a985d3ed5e4e4af",
-            "reference": "0794764b8d2592f3d8e5c1214a985d3ed5e4e4af",
+            "url": "https://api.github.com/repos/AsperaGmbH/xlsx-reader/zipball/0b61140ba905736b09e294f575acf47fe7edb44f",
+            "reference": "0b61140ba905736b09e294f575acf47fe7edb44f",
             "shasum": ""
         },
         "require": {
@@ -22,7 +22,7 @@
         "require-dev": {
             "phpunit/phpunit": "5.*"
         },
-        "time": "2020-03-04T15:49:57+00:00",
+        "time": "2020-10-02T12:50:34+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -57,24 +57,24 @@
     },
     {
         "name": "coffeecode/datalayer",
-        "version": "1.1.4",
-        "version_normalized": "1.1.4.0",
+        "version": "1.1.7",
+        "version_normalized": "1.1.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/robsonvleite/datalayer.git",
-            "reference": "17fecff8edb8fb5287648875f182acbb80389614"
+            "reference": "6a51fa227bba003be11519e7efa8338bc87460f5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/robsonvleite/datalayer/zipball/17fecff8edb8fb5287648875f182acbb80389614",
-            "reference": "17fecff8edb8fb5287648875f182acbb80389614",
+            "url": "https://api.github.com/repos/robsonvleite/datalayer/zipball/6a51fa227bba003be11519e7efa8338bc87460f5",
+            "reference": "6a51fa227bba003be11519e7efa8338bc87460f5",
             "shasum": ""
         },
         "require": {
             "ext-pdo": "*",
             "php": "^7.2"
         },
-        "time": "2019-10-29T13:34:17+00:00",
+        "time": "2020-07-02T17:10:50+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -155,17 +155,17 @@
     },
     {
         "name": "coffeecode/uploader",
-        "version": "1.0.9",
-        "version_normalized": "1.0.9.0",
+        "version": "1.0.10",
+        "version_normalized": "1.0.10.0",
         "source": {
             "type": "git",
             "url": "https://github.com/robsonvleite/uploader.git",
-            "reference": "46d681fb3fe64a92d53dd99ea38382edae0db9dc"
+            "reference": "1fd58f13d41de26be36bef9fcebe54b865f3380e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/robsonvleite/uploader/zipball/46d681fb3fe64a92d53dd99ea38382edae0db9dc",
-            "reference": "46d681fb3fe64a92d53dd99ea38382edae0db9dc",
+            "url": "https://api.github.com/repos/robsonvleite/uploader/zipball/1fd58f13d41de26be36bef9fcebe54b865f3380e",
+            "reference": "1fd58f13d41de26be36bef9fcebe54b865f3380e",
             "shasum": ""
         },
         "require": {
@@ -174,7 +174,7 @@
             "ext-mbstring": "*",
             "php": "^7.2"
         },
-        "time": "2020-06-13T00:15:08+00:00",
+        "time": "2020-06-23T13:22:03+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

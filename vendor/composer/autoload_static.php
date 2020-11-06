@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit997b549abb0ec5580d410a106b48d671
+class ComposerStaticInit83385c0cae116807a55816f185d8a111
 {
     public static $files = array (
         'e471bf351add62873bc0289ccd6a937f' => __DIR__ . '/..' . '/league/plates/src/Template/match.php',
@@ -69,8 +69,8 @@ class ComposerStaticInit997b549abb0ec5580d410a106b48d671
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit997b549abb0ec5580d410a106b48d671::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit997b549abb0ec5580d410a106b48d671::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit83385c0cae116807a55816f185d8a111::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit83385c0cae116807a55816f185d8a111::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
