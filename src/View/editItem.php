@@ -20,6 +20,8 @@
         <button type="submit">Enviar</button>
     </form>
 
+<br />
+<a href="/listar">Listar registros</a>
 <?php
 endif;
 if ($message):

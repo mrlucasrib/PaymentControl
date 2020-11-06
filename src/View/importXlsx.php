@@ -6,6 +6,8 @@
     </label>
     <button type="submit">Enviar</button>
 </form>
+<br />
+<a href="/listar">Listar registros</a>
 <?php if ($message):
     echo $message;
 endif;

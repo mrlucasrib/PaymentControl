@@ -7,7 +7,8 @@
     <input name="comments" type="text" placeholder="Comentarios"/>
     <button type="submit">Enviar</button>
 </form>
-
+<br />
+<a href="/listar">Listar registros</a>
 <?php if ($message):
     echo $message;
 endif;
