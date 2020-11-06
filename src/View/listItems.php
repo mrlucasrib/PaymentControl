@@ -1,6 +1,6 @@
 <h1>Dados de pagamento</h1>
 Inserir e excluir.
-<table>
+<table border="1"style="table-layout: fixed; text-align: left;">
     <tr>
         <th>ID</th>
         <th>Titulo</th>
@@ -31,9 +31,6 @@ Inserir e excluir.
                     <?= $pay->external_tax; ?>
                 </td>
                 <td>
-                    <?= $pay->comment; ?>
-                </td>
-                <td>
                     <?= $pay->comments; ?>
                 </td>
                 <td>
@@ -49,4 +46,5 @@ Inserir e excluir.
     endif;
     ?>
 </table>
-
+<br />
+<a href="/inserir">Inserir registro</a>
