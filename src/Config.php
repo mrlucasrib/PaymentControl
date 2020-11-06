@@ -1,6 +1,7 @@
 <?php
 $db = parse_url(getenv("DATABASE_URL"));
-
+echo "\n\n\n\n\n\n\nData\n";
+echo $db;
 define('URL_BASE', '');
 define("DATA_LAYER_CONFIG", [
     "driver" => "pgsql",
