@@ -3,7 +3,7 @@
   <a href="#" target="_blank">
     <img alt="License: AGPL--v3" src="https://img.shields.io/badge/License-AGPL--v3-yellow.svg" />
   </a>
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/mrlucasrib/Ecoleta-NLW?style=social">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/mrlucasrib/PaymentControl?style=social">
   <a href="https://twitter.com/mrlucasrib" target="_blank">
     <img alt="Twitter: mrlucasrib" src="https://img.shields.io/twitter/follow/mrlucasrib.svg?style=social" />
   </a>
@@ -52,10 +52,8 @@ docker-compose up -d
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](LICENSE) for details.
-
-Made with ❤️  by Lucas Ribeiro :wave: [Get in touch!](https://www.linkedin.com/in/mrlucasrib/)
+This project is under the AGPL v3 license. See the [LICENSE](LICENSE) for details.
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if you liked this project!
